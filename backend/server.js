@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const env = require('dotenv');
 const bodyParser = require('body-parser');
@@ -10,8 +11,11 @@ const app = express();
 env.config();
 
 // Activate body parser
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+// Access the images
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routers
 app.use('/api/v1/', require('./router/auth'));

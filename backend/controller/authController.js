@@ -30,8 +30,14 @@ module.exports.signUpHandler = (req, res, next) => {
         process.env.SECRET_APP_KEY
       ).toString();
 
+      // If user uploads profile image, then store it
+      let filePath;
+      if (req.file.filename) {
+        filePath = req.file.path;
+      }
+
       // If user not exists, then create new user and save into database
-      const newUser = new User({ name, email, password: encryptedPassword });
+      const newUser = new User({ name, email, password: encryptedPassword, profileImage: filePath });
       newUser.save();
       res.status(200).json('User created successfully');
     })
