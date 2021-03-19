@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  
+  font-family: 'Ubuntu', sans-serif !important;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
