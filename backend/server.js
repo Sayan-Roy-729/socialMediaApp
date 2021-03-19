@@ -1,5 +1,6 @@
 const express = require('express');
 const env = require('dotenv');
+const bodyParser = require('body-parser');
 
 const mongodbConnection = require('./config/db');
 
@@ -9,8 +10,8 @@ const app = express();
 env.config();
 
 // Activate body parser
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 // Routers
 app.use('/api/v1/', require('./router/auth'));
