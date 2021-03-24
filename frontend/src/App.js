@@ -1,6 +1,7 @@
 import './App.css';
 import AuthenticateUser from './components/AuthenticateUser/AuthenticateUser';
 import Navbar from './components/Navbar/Navbar';
+import UserInformation from './components/UserInformation/UserInformation';
 import WelcomePage from './components/WelcomePage/WelcomePage';
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     
 
     {/* <WelcomePage/> */}
-    <AuthenticateUser/>
+    {/* <AuthenticateUser/> */}
+    <UserInformation/>
 
      
     </>

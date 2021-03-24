@@ -9,7 +9,7 @@ const AuthenticateUser = () => {
         <>
           {/* <Signin/>
           <Signup/> */}
-          <Svg/>
+          {/* <Svg/> */}
         </>
             
         
