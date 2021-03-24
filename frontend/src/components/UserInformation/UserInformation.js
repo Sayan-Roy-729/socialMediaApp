@@ -6,9 +6,9 @@ const UserInformation = () => {
     <>
       <div className="userInfo">
         <div class="main-content">
-          <div class="container mt-7">
+          <div class="container mt-7 pa mb-5 bg-info-gray">
             {/* <!-- Table --> */}
-            <h2 class="mb-5">Profile Card</h2>
+            <h2 class="mb-5 profile-text">Profile Card</h2>
             <div class="row">
               <div class="col-xl-8 m-auto order-xl-2 mb-5 mb-xl-0">
                 <div class="card card-profile shadow">
@@ -24,7 +24,7 @@ const UserInformation = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                  <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" >
                     <div class="d-flex justify-content-between">
                       <a href="#" class="btn btn-sm btn-info mr-4">
                         Connect
@@ -69,7 +69,7 @@ const UserInformation = () => {
                         Computer Science
                       </div>
                       <hr class="my-4" />
-                      <p>
+                      {/* <p>
                         Ryan — the name taken by Melbourne-raised,
                         Brooklyn-based Nick Murphy — writes, performs and
                         records all of his own music.
@@ -79,7 +79,7 @@ const UserInformation = () => {
                         target="_blank"
                       >
                         Show more
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ const UserInformation = () => {
             </div>
           </div>
         </div>
-        <footer class="footer">
+        {/* <footer class="footer">
           <div class="row align-items-center justify-content-xl-between">
             <div class="col-xl-6 m-auto text-center">
               <div class="copyright">
@@ -104,7 +104,7 @@ const UserInformation = () => {
               </div>
             </div>
           </div>
-        </footer>
+        </footer> */}
       </div>
     </>
   );

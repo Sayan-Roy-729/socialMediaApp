@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+
 :root {
     --blue: #5e72e4;
     --indigo: #5603ad;
@@ -26,6 +28,7 @@
     --white: #fff;
     --neutral: #fff;
     --darker: black;
+    --bg-gray: rgba(0, 0, 0, 0.5);
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -61,7 +64,9 @@
     margin: 0;
     text-align: left;
     color: #525f7f;
-    background-color: #f8f9fe;
+    /* background-color: #f8f9fe; */
+    background-color: transparent;
+    
   }
   
   [tabindex='-1']:focus {
@@ -503,6 +508,10 @@
   .pt-0 {
     padding-top: 0 !important;
   }
+
+  .pa {
+    padding: 2.5rem;
+  }
   
   .pb-0 {
     padding-bottom: 0 !important;
@@ -706,6 +715,18 @@
   
   .main-content {
     position: relative;
+    /* animation: bgAnimation 5s alternate ease-in-out; */
+  }
+
+  body {
+    animation-name: bgAnimation;
+    animation-duration: 7s; 
+    animation-timing-function: ease-in-out; 
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
   }
   
   .footer {
@@ -792,4 +813,45 @@
     }
   }
   
+  .bg-info-gray {
+    background-color: var(--bg-gray);
+  }
+
+  .profile-text {
+    color: white;
+  }
+
+  .profile-text:hover {
+    color: var(--indigo);
+    transition: color 0.4s ease-in-out;
+  }
+
+
+  @keyframes bgAnimation {
+    /* 0% {
+      background-color: #0cbaba;
+      background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+    } */
+
+    /* 25% {
+      background-color: #a40606;
+      background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+    } */
+
+    0% {
+      background-color: #a4508b;
+      background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+    }
+
+    /* 75% {
+      background-color: #9e8fb2;
+      background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
+    } */
+
+    100% {
+      background-color: #2a2a72;
+      background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    }
+  }
   
+
