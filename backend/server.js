@@ -19,6 +19,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routers
 app.use('/api/v1/', require('./router/auth'));
+app.use('/api/v1/post/', require('./router/post'));
 
 // Error middleware
 app.use((error, req, res, next) => {
